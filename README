@@ -1,0 +1,18 @@
+irc-logs.lisp [-n | -h] [-lisp yy.mm.dd] [-sbcl yy.mm.dd]
+
+Fetches #lisp and #sbcl logs using curl to subdirectories named lisp/ and
+sbcl/ respectively. If some logs already exist, fetches all later ones --
+otherwise logs start from the current month, or the specified starting
+date if one is provided.
+
+#lisp logs are fetched from http://tunes.org/~~nef/logs/lisp/, and #sbcl logs
+from http://ccl.clozure.com/irc-logs/sbcl/.
+
+Options:
+
+ -n     Dry run. Don't actually do anything, merely show what would be fetched.
+
+ -lisp  Starting date of #lisp logs.
+
+ -sbcl  Starting date of #sbcl logs.
+
